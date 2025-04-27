@@ -58,7 +58,7 @@ void Log_In(char Student_ID[25])
     if(file == NULL)
     {
         printf("     Some Error Occurred. :( \n \t --->>>> Please Try Again...  :)  \n");
-        return 0;
+        return;
     }
 
     while (fscanf(file,"%s %s %d", S.Name, S.Student_ID, &S.Semester) != EOF)
@@ -100,7 +100,7 @@ void Book_Menu(char Student_ID[25])
     break;
   case 3:
       printf("Successfully Exited.\n");
-      return 0;
+      return;
   default:
       printf("ERROR 404! Please choose correctly.\n");
   }
@@ -116,7 +116,7 @@ void Book_List_Option(char Student_ID[25])
     scanf("%s", &B.Title);
     printf("Enter the Author: ");
     scanf("%s", &B.Author);
-    printf("Condition (New/Used/Old): ");
+    printf("Condition (New/Used): ");
     scanf("%s", &B.Condition);
     printf("Availability (Yes/No): ");
     scanf("%s", &B.Availability);
